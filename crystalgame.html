@@ -1,0 +1,86 @@
+<!DOCTYPE html
+>
+<html>
+	<head>
+		<meta charset="UTF-8">
+                <title> crystal game</title>
+		<script
+  		src="https://code.jquery.com/jquery-3.2.1.min.js"
+  		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  		crossorigin="anonymous"></script>	
+	</head>
+<body>
+
+	<center><img src="./crystals/crystal1.png" alt="crytal1" id="crystal1">
+	<img src="./crystals/crystal2.png" alt="crytal2" id="crystal2">
+	<img src="./crystals/crystal3.png" alt="crystal3" id="crystal3"> 
+	<img src="./crystals/crystal4.png" alt="crystal4" id="crystal4">
+
+	<h1 id="random-number"></h1>
+
+	<h2 id="random"><h2></center>
+<script>
+
+var wins = 0;
+var losses = 0;
+var score = 0;
+var totalScore = 0;
+var MaxAttempts = 13;
+
+var crystal1 = 0;
+var crystal2 = 0;
+var crystal3 = 0;
+var crystal4 = 0;
+
+var random = 0;
+
+random = Math.floor(Math.random() * (20)) + 30;
+
+
+
+$(document).ready(function() {
+	$("#random").html(random);
+
+        $("#crystal1").on("click",function() {
+
+        var score = Math.floor(Math.random() * (4)) + 6;
+        crystal1 = score;
+        totalScore = totalScore + crystal1;
+
+        $("#random-number").html(score);
+	});
+        $("#crystal2").on("click",function() {
+
+        var score = Math.floor(Math.random() * (4)) + 14;
+        crystal2 = score;
+        totalScore = totalScore + crystal2;
+
+        $("#random-number").html(score);
+        });
+
+        $("#crystal3").on("click",function() {
+
+        var score = Math.floor(Math.random() * (4)) + 38;
+        crystal3 = score;
+        totalScore = totalScore + crystal2;
+
+        $("#random-number").html(score);
+        });
+
+
+	$("#crystal4").on("click",function() {
+
+	var score = Math.floor(Math.random() * (4)) + 29; 
+	crystal4 = score;
+	totalScore = totalScore + crystal4;
+     $("#random-number").html(score)
+
+	});
+});
+
+
+
+</script>
+
+</body>
+</html>
